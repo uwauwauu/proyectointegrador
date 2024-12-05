@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.reservasrp.vistas;
-
-import Controlador.InicioController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,14 +11,11 @@ import java.util.Date;
  * @author User
  */
 public class InicioEmpleado extends javax.swing.JFrame {
-
-    private InicioController controlador;
     
     public InicioEmpleado() {
         initComponents();
         fechas.setText(fecha());
         this.setLocationRelativeTo(null); 
-        this.controlador = new InicioController(this);
     }
 
     /**

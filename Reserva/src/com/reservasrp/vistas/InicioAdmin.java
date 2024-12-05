@@ -12,11 +12,11 @@ import java.util.Date;
  *
  * @author User
  */
-public class Inicio extends javax.swing.JFrame {
+public class InicioAdmin extends javax.swing.JFrame {
 
     private InicioController controlador;
     
-    public Inicio() {
+    public InicioAdmin() {
         initComponents();
         fechas.setText(fecha());
         this.setLocationRelativeTo(null); 
@@ -34,14 +34,13 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BRegMesas = new javax.swing.JButton();
-        Logout = new javax.swing.JButton();
-        BVisPedidos = new javax.swing.JButton();
+        BLogout = new javax.swing.JButton();
         BReportes = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BReservas1 = new javax.swing.JButton();
-        BReservas2 = new javax.swing.JButton();
+        BRegReservas = new javax.swing.JButton();
+        BHistReserva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,26 +51,23 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setText("Página de inicio");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
-        BRegMesas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegMesas.setText("Registro de Mesas");
-        jPanel1.add(BRegMesas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 650, 230, 60));
-
-        Logout.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Logout.setText("Cerrar Sesion");
-        Logout.addActionListener(new java.awt.event.ActionListener() {
+        BLogout.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BLogout.setText("Cerrar Sesion");
+        BLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
+                BLogoutActionPerformed(evt);
             }
         });
-        jPanel1.add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 140, 50));
-
-        BVisPedidos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BVisPedidos.setText("Visualización de pedidos");
-        jPanel1.add(BVisPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 230, 60));
+        jPanel1.add(BLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 140, 50));
 
         BReportes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BReportes.setText("Reportes de consumo");
-        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 580, 230, 60));
+        BReportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BReportesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 230, 60));
 
         fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fechas.setText("DD/MM/YYYY");
@@ -82,11 +78,30 @@ public class Inicio extends javax.swing.JFrame {
 
         BReservas1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BReservas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/cfg.png"))); // NOI18N
+        BReservas1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BReservas1MouseClicked(evt);
+            }
+        });
+        BReservas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BReservas1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(BReservas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 641, 90, 80));
 
-        BReservas2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReservas2.setText("Registro de Reservas");
-        jPanel1.add(BReservas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 230, 60));
+        BRegReservas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRegReservas.setText("Registro de Reservas");
+        BRegReservas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRegReservasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BRegReservas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 230, 60));
+
+        BHistReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BHistReserva.setText("Historial de Reservas");
+        jPanel1.add(BHistReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,9 +117,25 @@ public class Inicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+    private void BLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
+    }//GEN-LAST:event_BLogoutActionPerformed
+
+    private void BReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReportesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BReportesActionPerformed
+
+    private void BRegReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegReservasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BRegReservasActionPerformed
+
+    private void BReservas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BReservas1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BReservas1MouseClicked
+
+    private void BReservas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReservas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BReservas1ActionPerformed
 
     public static String fecha() {
         Date fecha = new Date();
@@ -125,31 +156,31 @@ public class Inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Inicio().setVisible(true);
+                new InicioAdmin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BRegMesas;
+    public javax.swing.JButton BHistReserva;
+    public javax.swing.JButton BLogout;
+    public javax.swing.JButton BRegReservas;
     public javax.swing.JButton BReportes;
     public javax.swing.JButton BReservas1;
-    public javax.swing.JButton BReservas2;
-    public javax.swing.JButton BVisPedidos;
-    public javax.swing.JButton Logout;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

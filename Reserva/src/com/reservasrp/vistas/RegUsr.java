@@ -11,12 +11,10 @@ import Controlador.LoginController;
  * @author User
  */
 public class RegUsr extends javax.swing.JFrame {
-    private LoginController controlador;
     
     public RegUsr() {
         initComponents();
         this.setLocationRelativeTo(null); 
-        this.controlador = new LoginController(this);
     }
 
     /**

@@ -3,28 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/alcohol.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/Reserva.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/6326055.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/ConfigUsr.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/ConfigPlat.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/Reportes.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/pollo.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/Inicio.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/Controlador/InicioController.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/InicioEmpleado.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/ConfigBeb.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/cfg.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/Login.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/calendar.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/configu.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/RegUsr.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/coca.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/plancha.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/images/mesas.png</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/RegReserva.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/Config.java</file>
-            <file>file:/D:/AR/Descargas/Reserva-redesign/Reserva/src/com/reservasrp/vistas/ConfigCate.java</file>
+            <file>file:/C:/Users/Natalia/Downloads/proyectointegrador/Reserva/src/com/reservasrp/vistas/ConfigBeb.java</file>
+            <file>file:/C:/Users/Natalia/Downloads/proyectointegrador/Reserva/src/com/reservasrp/connectionDB/ConexiónBD.java</file>
+            <file>file:/C:/Users/Natalia/Downloads/proyectointegrador/Reserva/src/com/reservasrp/vistas/InicioAdmin.java</file>
+            <file>file:/C:/Users/Natalia/Downloads/proyectointegrador/Reserva/src/Controlador/InicioController.java</file>
+            <file>file:/C:/Users/Natalia/Downloads/proyectointegrador/Reserva/src/com/reservasrp/vistas/Login.java</file>
         </group>
     </open-files>
 </project-private>
