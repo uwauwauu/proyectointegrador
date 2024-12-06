@@ -4,6 +4,7 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.ConfigController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,12 +13,14 @@ import java.util.Date;
  * @author User
  */
 public class Config extends javax.swing.JFrame {
-
+    
+    private ConfigController controlador;
     
     public Config() {
         initComponents();
-        fechas.setText(fecha());
         this.setLocationRelativeTo(null); 
+        fechas.setText(fecha());
+        this.controlador = new ConfigController(this);
     }
 
     /**
@@ -31,54 +34,87 @@ public class Config extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BRegMesas = new javax.swing.JButton();
-        Logout = new javax.swing.JButton();
-        BVisPedidos = new javax.swing.JButton();
-        BReportes = new javax.swing.JButton();
+        BRegUsuarios = new javax.swing.JButton();
+        BReturn = new javax.swing.JButton();
+        BVisPlatillos = new javax.swing.JButton();
+        BBebidas = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        BReservas2 = new javax.swing.JButton();
+        BConfCat = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Configuracion");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
 
-        BRegMesas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegMesas.setText("Usuarios registrados");
-        jPanel1.add(BRegMesas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 230, 60));
+        BRegUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRegUsuarios.setText("Usuarios registrados");
 
-        Logout.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Logout.setText("Volver");
-        Logout.addActionListener(new java.awt.event.ActionListener() {
+        BReturn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BReturn.setText("Volver");
+        BReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
+                BReturnActionPerformed(evt);
             }
         });
-        jPanel1.add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 50));
 
-        BVisPedidos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BVisPedidos.setText("Platillos");
-        jPanel1.add(BVisPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 230, 60));
+        BVisPlatillos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BVisPlatillos.setText("Platillos");
 
-        BReportes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReportes.setText("Bebidas");
-        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 230, 60));
+        BBebidas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BBebidas.setText("Bebidas");
 
         fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fechas.setText("DD/MM/YYYY");
-        jPanel1.add(fechas, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 100, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/configu.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 260, -1));
+        BConfCat.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BConfCat.setText("Categorias");
 
-        BReservas2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReservas2.setText("Categorias");
-        jPanel1.add(BReservas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 230, 60));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/configu.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(BReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
+                .addComponent(jLabel1)
+                .addGap(118, 118, 118)
+                .addComponent(fechas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BConfCat, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BVisPlatillos, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BRegUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(fechas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BConfCat, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(BVisPlatillos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(BBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(BRegUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,15 +124,15 @@ public class Config extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+    private void BReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReturnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
+    }//GEN-LAST:event_BReturnActionPerformed
 
     public static String fecha() {
         Date fecha = new Date();
@@ -104,47 +140,20 @@ public class Config extends javax.swing.JFrame {
         return formato.format(fecha);
     }
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Config.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Config.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Config.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Config.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Config().setVisible(true);
-            }
-        });
+       Config config = new Config();
+       config.setVisible(true);
+       config.setLocationRelativeTo(config);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BRegMesas;
-    public javax.swing.JButton BReportes;
-    public javax.swing.JButton BReservas2;
-    public javax.swing.JButton BVisPedidos;
-    public javax.swing.JButton Logout;
+    public javax.swing.JButton BBebidas;
+    public javax.swing.JButton BConfCat;
+    public javax.swing.JButton BRegUsuarios;
+    public javax.swing.JButton BReturn;
+    public javax.swing.JButton BVisPlatillos;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import com.reservasrp.vistas.Config;
 import com.reservasrp.vistas.RegReserva;
 import com.reservasrp.vistas.HistReserva;
 import com.reservasrp.vistas.Reportes;
@@ -11,6 +12,8 @@ import com.reservasrp.vistas.InicioAdmin;
 import com.reservasrp.vistas.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -27,6 +30,7 @@ public class InicioController implements ActionListener{
         this.vista.BRegReservas.addActionListener(this);
         this.vista.BReportes.addActionListener(this);
         this.vista.BLogout.addActionListener(this);
+        agregarEventos();
     }
     
     private void logout(){
@@ -34,6 +38,24 @@ public class InicioController implements ActionListener{
         if (JOptionPane.showConfirmDialog(frame, "Confirma si deseas cerrar sesión", "Reservas", JOptionPane.YES_NO_OPTION)
                 == JOptionPane.YES_OPTION) {
             new Login().setVisible(true);
+            vista.dispose();
+        }
+    }
+    
+    private void agregarEventos() {
+        vista.BConfig.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent evt) {
+                accionBConfig(evt);
+            }
+        });
+    }
+    
+    private void accionBConfig(MouseEvent evt) {
+        frame = new JFrame("Exit");
+        if (JOptionPane.showConfirmDialog(frame, "Confirma si deseas entrar al modo de configuración", "Reservas", JOptionPane.YES_NO_OPTION)
+                == JOptionPane.YES_OPTION) {
+            new Config().setVisible(true);
             vista.dispose();
         }
     }

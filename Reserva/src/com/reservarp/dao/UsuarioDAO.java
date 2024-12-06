@@ -26,11 +26,11 @@ public class UsuarioDAO {
     
      public boolean validarUsuario(Usuario us){
          boolean result = false;
-         final String SQL_CONSULTA ="SELECT * FROM usuario WHERE nom_usuario = ? AND contraseña = ?";
+         final String SQL_CONSULTA ="SELECT * FROM usuarios WHERE user_us = ? AND con_us = ?";
         try {
             pstm =con.getConnection().prepareStatement(SQL_CONSULTA);
-            pstm.setString(1, us.getUsuario());
-            pstm.setString(2, us.getContraseña());
+            pstm.setString(1, us.getUser_us());
+            pstm.setString(2, us.getCon_us());
             res = pstm.executeQuery();
             if(res.next()){
                 result = true;
@@ -40,4 +40,19 @@ public class UsuarioDAO {
             e.printStackTrace();
         }return result;
      }
+     
+     public Boolean verificarPrivilegios(String userId) {
+        String sql = "SELECT privilegios_us FROM usuarios WHERE user_us = ?";
+        try (PreparedStatement statement = con.getConnection().prepareStatement(sql)) {
+            statement.setString(1, userId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getBoolean("privilegios_us");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false; // En caso de error o no encontrar al usuario
+    }
 }

@@ -38,7 +38,7 @@ public class InicioAdmin extends javax.swing.JFrame {
         BReportes = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        BReservas1 = new javax.swing.JButton();
+        BConfig = new javax.swing.JButton();
         BRegReservas = new javax.swing.JButton();
         BHistReserva = new javax.swing.JButton();
 
@@ -76,19 +76,19 @@ public class InicioAdmin extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/icon.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 330, -1));
 
-        BReservas1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReservas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/cfg.png"))); // NOI18N
-        BReservas1.addMouseListener(new java.awt.event.MouseAdapter() {
+        BConfig.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/cfg.png"))); // NOI18N
+        BConfig.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BReservas1MouseClicked(evt);
+                BConfigMouseClicked(evt);
             }
         });
-        BReservas1.addActionListener(new java.awt.event.ActionListener() {
+        BConfig.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BReservas1ActionPerformed(evt);
+                BConfigActionPerformed(evt);
             }
         });
-        jPanel1.add(BReservas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 641, 90, 80));
+        jPanel1.add(BConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 641, 90, 80));
 
         BRegReservas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BRegReservas.setText("Registro de Reservas");
@@ -129,13 +129,13 @@ public class InicioAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BRegReservasActionPerformed
 
-    private void BReservas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BReservas1MouseClicked
+    private void BConfigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BConfigMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_BReservas1MouseClicked
+    }//GEN-LAST:event_BConfigMouseClicked
 
-    private void BReservas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReservas1ActionPerformed
+    private void BConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BConfigActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BReservas1ActionPerformed
+    }//GEN-LAST:event_BConfigActionPerformed
 
     public static String fecha() {
         Date fecha = new Date();
@@ -176,11 +176,11 @@ public class InicioAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton BConfig;
     public javax.swing.JButton BHistReserva;
     public javax.swing.JButton BLogout;
     public javax.swing.JButton BRegReservas;
     public javax.swing.JButton BReportes;
-    public javax.swing.JButton BReservas1;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

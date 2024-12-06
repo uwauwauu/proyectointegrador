@@ -7,6 +7,7 @@ package Controlador;
 import com.reserva.entity.Usuario;
 import com.reservarp.dao.UsuarioDAO;
 import com.reservasrp.vistas.InicioAdmin;
+import com.reservasrp.vistas.InicioEmpleado;
 import com.reservasrp.vistas.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,7 +39,11 @@ public class LoginController implements ActionListener{
         String contraseña = String.valueOf(vista.jContraseñatxt.getPassword());
         Usuario us = new Usuario(usuario, contraseña);
         if(model.validarUsuario(us)){
-            new InicioAdmin().setVisible(true);
+            if(model.verificarPrivilegios(usuario)){
+                new InicioAdmin().setVisible(true);
+            }else{
+                new InicioEmpleado().setVisible(true);
+            }
             vista.dispose();
         }else{
             JOptionPane.showMessageDialog(vista, "Usuario no registrado");
