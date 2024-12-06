@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.reservasrp.vistas;
+import Controlador.InicioEmpleadoController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,11 +12,13 @@ import java.util.Date;
  * @author User
  */
 public class InicioEmpleado extends javax.swing.JFrame {
+    private InicioEmpleadoController controlador;
     
     public InicioEmpleado() {
         initComponents();
         fechas.setText(fecha());
         this.setLocationRelativeTo(null); 
+        this.controlador = new InicioEmpleadoController(this);
     }
 
     /**
@@ -30,10 +33,10 @@ public class InicioEmpleado extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
-        RegRes = new javax.swing.JButton();
+        BRegReserva = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        BReservas2 = new javax.swing.JButton();
+        BHistReserva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,9 +56,9 @@ public class InicioEmpleado extends javax.swing.JFrame {
         });
         jPanel1.add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 650, 140, 50));
 
-        RegRes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RegRes.setText("Realizar una reserva");
-        jPanel1.add(RegRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 230, 60));
+        BRegReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRegReserva.setText("Realizar una reserva");
+        jPanel1.add(BRegReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 230, 60));
 
         fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fechas.setText("DD/MM/YYYY");
@@ -64,14 +67,14 @@ public class InicioEmpleado extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/icon.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 330, -1));
 
-        BReservas2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReservas2.setText("Registro de Reservas");
-        BReservas2.addActionListener(new java.awt.event.ActionListener() {
+        BHistReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BHistReserva.setText("Historial de Reservas");
+        BHistReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BReservas2ActionPerformed(evt);
+                BHistReservaActionPerformed(evt);
             }
         });
-        jPanel1.add(BReservas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 230, 60));
+        jPanel1.add(BHistReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,9 +94,9 @@ public class InicioEmpleado extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutActionPerformed
 
-    private void BReservas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReservas2ActionPerformed
+    private void BHistReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BHistReservaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BReservas2ActionPerformed
+    }//GEN-LAST:event_BHistReservaActionPerformed
 
     public static String fecha() {
         Date fecha = new Date();
@@ -134,9 +137,9 @@ public class InicioEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BReservas2;
+    public javax.swing.JButton BHistReserva;
+    public javax.swing.JButton BRegReserva;
     public javax.swing.JButton Logout;
-    public javax.swing.JButton RegRes;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

@@ -20,7 +20,7 @@ public class ConexiónBD {
     private static final String URL="jdbc:mysql://localhost/reservasbd";
     private static final String DRIVER ="com.mysql.cj.jdbc.Driver";
     private static final String USER ="root";
-    private static final String PASS="72152350N";
+    private static final String PASS="admin123";
    
     private ConexiónBD(){
         try {

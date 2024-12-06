@@ -4,7 +4,7 @@
  */
 package com.reservasrp.vistas;
 
-import Controlador.InicioController;
+import Controlador.InicioAdminController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,13 +14,13 @@ import java.util.Date;
  */
 public class InicioAdmin extends javax.swing.JFrame {
 
-    private InicioController controlador;
+    private InicioAdminController controlador;
     
     public InicioAdmin() {
         initComponents();
         fechas.setText(fecha());
         this.setLocationRelativeTo(null); 
-        this.controlador = new InicioController(this);
+        this.controlador = new InicioAdminController(this);
     }
 
     /**

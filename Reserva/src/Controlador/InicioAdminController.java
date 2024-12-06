@@ -21,11 +21,11 @@ import javax.swing.JOptionPane;
  *
  * @author Natalia
  */
-public class InicioController implements ActionListener{
+public class InicioAdminController implements ActionListener{
     private InicioAdmin vista;
     private JFrame frame;
 
-    public InicioController(InicioAdmin vista) {
+    public InicioAdminController(InicioAdmin vista) {
         this.vista = vista;
         this.vista.BRegReservas.addActionListener(this);
         this.vista.BReportes.addActionListener(this);
