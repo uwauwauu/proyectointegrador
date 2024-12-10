@@ -38,9 +38,9 @@ public class InicioAdmin extends javax.swing.JFrame {
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BConfig = new javax.swing.JButton();
-        BRegUsr = new javax.swing.JButton();
-        BHistReserva1 = new javax.swing.JButton();
-        BReportes1 = new javax.swing.JButton();
+        BRegUser = new javax.swing.JButton();
+        BHistReserva = new javax.swing.JButton();
+        BRepCon = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,17 +81,17 @@ public class InicioAdmin extends javax.swing.JFrame {
         });
         jPanel1.add(BConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, 90, 80));
 
-        BRegUsr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegUsr.setText("Registrar Usuario");
-        jPanel1.add(BRegUsr, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 600, 230, 60));
+        BRegUser.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRegUser.setText("Registrar Usuario");
+        jPanel1.add(BRegUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 600, 230, 60));
 
-        BHistReserva1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BHistReserva1.setText("Historial de Reservas");
-        jPanel1.add(BHistReserva1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 230, 60));
+        BHistReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BHistReserva.setText("Historial de Reservas");
+        jPanel1.add(BHistReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 230, 60));
 
-        BReportes1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReportes1.setText("Reportes de consumo");
-        jPanel1.add(BReportes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
+        BRepCon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRepCon.setText("Reportes de consumo");
+        jPanel1.add(BRepCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,10 +159,10 @@ public class InicioAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BConfig;
-    public javax.swing.JButton BHistReserva1;
+    public javax.swing.JButton BHistReserva;
     public javax.swing.JButton BLogout;
-    public javax.swing.JButton BRegUsr;
-    public javax.swing.JButton BReportes1;
+    public javax.swing.JButton BRegUser;
+    public javax.swing.JButton BRepCon;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

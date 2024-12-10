@@ -26,8 +26,10 @@ public class InicioAdminController implements ActionListener{
 
     public InicioAdminController(InicioAdmin vista) {
         this.vista = vista;
-        this.vista.BRegUsr.addActionListener(this);
+        this.vista.BRegUser.addActionListener(this);
         this.vista.BLogout.addActionListener(this);
+        this.vista.BRepCon.addActionListener(this);
+        this.vista.BHistReserva.addActionListener(this);
         agregarEventos();
     }
     
@@ -60,10 +62,10 @@ public class InicioAdminController implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== vista.BRegUsr){
+        if(e.getSource()== vista.BRegUser){
             new HistReserva().setVisible(true);
         }
-        if(e.getSource()== vista.BRegUsr){
+        if(e.getSource()== vista.BRegUser){
             new Reportes().setVisible(true);
         }
         if(e.getSource()== vista.BLogout){

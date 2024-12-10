@@ -79,7 +79,7 @@ public class RegReserva extends javax.swing.JFrame {
 
         BReservar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BReservar.setText("Reservar");
-        jPanel1.add(BReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 810, -1, -1));
+        jPanel1.add(BReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 710, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Mesas disponibles");
@@ -120,7 +120,7 @@ public class RegReserva extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel15.setText("S/.100.00.000");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 810, 160, 40));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 710, 160, 40));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setText("Postres:");
@@ -175,7 +175,7 @@ public class RegReserva extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel19.setText("Total en soles:");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 810, 160, 40));
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 710, 160, 40));
 
         jComboBox30.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Tartaleta de fresa", "Tiramisú", "Brownie", "Porción red velvet", "Porción cheesecake" }));
         jComboBox30.addActionListener(new java.awt.event.ActionListener() {
@@ -223,12 +223,12 @@ public class RegReserva extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Platillo", "Abreviado", "Precio", "Cantidad"
             }
         ));
         jScrollPane1.setViewportView(jTableReserva);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 920, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 920, 160));
 
         BAgrEntrada.setBackground(new java.awt.Color(255, 153, 51));
         BAgrEntrada.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -276,7 +276,7 @@ public class RegReserva extends javax.swing.JFrame {
 
         BLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BLimpiar.setText("Limpiar");
-        jPanel1.add(BLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, -1, -1));
+        jPanel1.add(BLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 710, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -289,8 +289,9 @@ public class RegReserva extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 864, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
