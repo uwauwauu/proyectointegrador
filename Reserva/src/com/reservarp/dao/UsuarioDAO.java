@@ -55,4 +55,23 @@ public class UsuarioDAO {
         }
         return false; // En caso de error o no encontrar al usuario
     }
+     
+     public boolean insert(Usuario us) {
+        boolean result = false;
+        final String SQL_INSERT="insert into usuarios (dni_us, nom_us, user_us, con_us, privilegios_us) values(?,?,?,?,?)";
+        try{
+            pstm = con.getConnection().prepareStatement(SQL_INSERT);
+            pstm.setString(1, us.getDni_us());
+            pstm.setString(2, us.getNom_us());
+            pstm.setString(3, us.getUser_us());
+            pstm.setString(4, us.getCon_us());
+            pstm.setBoolean(5, us.getPrivilegios_us());
+            if(pstm.executeUpdate()>0){
+                result = true;
+            }
+        } catch (Exception e) {
+            System.out.println("Error al insertar datos "+e.getMessage());
+            e.printStackTrace();
+        } return result;
+    }
 }

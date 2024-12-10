@@ -35,12 +35,11 @@ public class InicioAdmin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BLogout = new javax.swing.JButton();
-        BReportes = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BConfig = new javax.swing.JButton();
-        BRegReservas = new javax.swing.JButton();
-        BHistReserva = new javax.swing.JButton();
+        BReportes = new javax.swing.JButton();
+        BHistReserva1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,15 +58,6 @@ public class InicioAdmin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 140, 50));
-
-        BReportes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReportes.setText("Reportes de consumo");
-        BReportes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BReportesActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 230, 60));
 
         fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fechas.setText("DD/MM/YYYY");
@@ -90,18 +80,13 @@ public class InicioAdmin extends javax.swing.JFrame {
         });
         jPanel1.add(BConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 641, 90, 80));
 
-        BRegReservas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegReservas.setText("Registro de Reservas");
-        BRegReservas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BRegReservasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BRegReservas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 230, 60));
+        BReportes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BReportes.setText("Reportes de consumo");
+        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
 
-        BHistReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BHistReserva.setText("Historial de Reservas");
-        jPanel1.add(BHistReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
+        BHistReserva1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BHistReserva1.setText("Historial de Reservas");
+        jPanel1.add(BHistReserva1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,14 +105,6 @@ public class InicioAdmin extends javax.swing.JFrame {
     private void BLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLogoutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BLogoutActionPerformed
-
-    private void BReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BReportesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BReportesActionPerformed
-
-    private void BRegReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegReservasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BRegReservasActionPerformed
 
     private void BConfigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BConfigMouseClicked
         // TODO add your handling code here:
@@ -177,9 +154,8 @@ public class InicioAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BConfig;
-    public javax.swing.JButton BHistReserva;
+    public javax.swing.JButton BHistReserva1;
     public javax.swing.JButton BLogout;
-    public javax.swing.JButton BRegReservas;
     public javax.swing.JButton BReportes;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;

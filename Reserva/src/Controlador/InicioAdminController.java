@@ -5,7 +5,6 @@
 package Controlador;
 
 import com.reservasrp.vistas.Config;
-import com.reservasrp.vistas.RegReserva;
 import com.reservasrp.vistas.HistReserva;
 import com.reservasrp.vistas.Reportes;
 import com.reservasrp.vistas.InicioAdmin;
@@ -27,7 +26,6 @@ public class InicioAdminController implements ActionListener{
 
     public InicioAdminController(InicioAdmin vista) {
         this.vista = vista;
-        this.vista.BRegReservas.addActionListener(this);
         this.vista.BReportes.addActionListener(this);
         this.vista.BLogout.addActionListener(this);
         agregarEventos();
@@ -62,10 +60,7 @@ public class InicioAdminController implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== vista.BRegReservas){
-            new RegReserva().setVisible(true);
-        }
-        if(e.getSource()== vista.BHistReserva){
+        if(e.getSource()== vista.BReportes){
             new HistReserva().setVisible(true);
         }
         if(e.getSource()== vista.BReportes){

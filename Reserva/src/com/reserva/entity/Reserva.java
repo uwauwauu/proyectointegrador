@@ -13,22 +13,25 @@ public class Reserva {
     private String fec_res;
     private String h_inicio;
     private String h_final;
+    private int num_personas;
     private String dni_cli;
     private int id_mes;
 
-    public Reserva(int id_res, String fec_res, String h_inicio, String h_final, String dni_cli, int id_mes) {
+    public Reserva(int id_res, String fec_res, String h_inicio, String h_final, int num_personas, String dni_cli, int id_mes) {
         this.id_res = id_res;
         this.fec_res = fec_res;
         this.h_inicio = h_inicio;
         this.h_final = h_final;
+        this.num_personas = num_personas;
         this.dni_cli = dni_cli;
         this.id_mes = id_mes;
     }
 
-    public Reserva(String fec_res, String h_inicio, String h_final, String dni_cli, int id_mes) {
+    public Reserva(String fec_res, String h_inicio, String h_final, int num_personas, String dni_cli, int id_mes) {
         this.fec_res = fec_res;
         this.h_inicio = h_inicio;
         this.h_final = h_final;
+        this.num_personas = num_personas;
         this.dni_cli = dni_cli;
         this.id_mes = id_mes;
     }
@@ -65,6 +68,14 @@ public class Reserva {
         this.h_final = h_final;
     }
 
+    public int getNum_personas() {
+        return num_personas;
+    }
+
+    public void setNum_personas(int num_personas) {
+        this.num_personas = num_personas;
+    }
+
     public String getDni_cli() {
         return dni_cli;
     }
@@ -79,5 +90,5 @@ public class Reserva {
 
     public void setId_mes(int id_mes) {
         this.id_mes = id_mes;
-    }
+    } 
 }

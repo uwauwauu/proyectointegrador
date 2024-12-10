@@ -29,14 +29,14 @@ public class HistReserva extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableReservas = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        BEliminar = new javax.swing.JButton();
+        IDtxt = new javax.swing.JTextField();
+        BVolver = new javax.swing.JButton();
+        BEditar = new javax.swing.JButton();
+        BActualizar = new javax.swing.JButton();
+        BRefresh = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -48,7 +48,7 @@ public class HistReserva extends javax.swing.JFrame {
         jLabel1.setText("Buscar por ID");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableReservas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -59,7 +59,12 @@ public class HistReserva extends javax.swing.JFrame {
                 "ID", "Nombre", "Fecha", "Hora", "Tiempo", "Telefono", "Personas", "Entrada", "Plato", "Postre", "Bebida", "Costo", "Estado"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jTableReservas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableReservasMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTableReservas);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1070, -1));
 
@@ -67,28 +72,28 @@ public class HistReserva extends javax.swing.JFrame {
         jLabel3.setText("Registro de Reservas");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setText("Eliminar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 110, -1, -1));
+        BEliminar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BEliminar.setText("Eliminar");
+        jPanel1.add(BEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 110, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, 30));
+        IDtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(IDtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, 30));
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton4.setText("Volver");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        BVolver.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BVolver.setText("Volver");
+        jPanel1.add(BVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton5.setText("Editar");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
+        BEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BEditar.setText("Editar");
+        jPanel1.add(BEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton6.setText("Guardar");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
+        BActualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BActualizar.setText("Actualizar");
+        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton7.setText("Cancelar");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, -1, -1));
+        BRefresh.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BRefresh.setText("Refrescar");
+        jPanel1.add(BRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/list.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 50, -1, -1));
@@ -106,6 +111,10 @@ public class HistReserva extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTableReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableReservasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableReservasMouseClicked
 
     /**
      * @param args the command line arguments
@@ -146,17 +155,17 @@ public class HistReserva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    public javax.swing.JButton BActualizar;
+    public javax.swing.JButton BEditar;
+    public javax.swing.JButton BEliminar;
+    public javax.swing.JButton BRefresh;
+    public javax.swing.JButton BVolver;
+    public javax.swing.JTextField IDtxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTable jTableReservas;
     // End of variables declaration//GEN-END:variables
 }
