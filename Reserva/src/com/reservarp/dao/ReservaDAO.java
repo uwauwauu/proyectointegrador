@@ -57,9 +57,10 @@ public class ReservaDAO {
         return listarFecha;
     }
     
+    //listar todas las reservas
     public List<Reserva> list() {
         List<Reserva> list = new ArrayList<>();
-        String selectQuery = "select * from productos";
+        String selectQuery = "select * from reservas";
         try {
             st = con.getConnection().createStatement();
             rs = st.executeQuery(selectQuery);
@@ -80,6 +81,28 @@ public class ReservaDAO {
         }
         return list;
     }
+    
+    public boolean insert(Reserva res) {
+        boolean result = false;
+        final String SQL_INSERT = "insert into reservas (fec_res, h_inicio, h_final, num_personas, dni_cli, id_ms) values(?,?,?,?,?,?)";
+        try {
+            pstm = con.getConnection().prepareStatement(SQL_INSERT);
+            pstm.setString(1, res.getFec_res());
+            pstm.setString(2, res.getH_inicio());
+            pstm.setString(3, res.getH_final());
+            pstm.setInt(4, res.getNum_personas());
+            pstm.setString(5, res.getDni_cli());
+            pstm.setInt(5, res.getId_mes());
+            if (pstm.executeUpdate() > 0) {
+                result = true;
+            }
+        } catch (Exception e) {
+            System.out.println("Error al insertar datos " + e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
+    }
+    
     
     public void eliminar(Integer ID_res) {
         final String SQL_DELETE = "delete from reservas where id_res=?";

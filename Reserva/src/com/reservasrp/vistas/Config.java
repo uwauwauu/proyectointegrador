@@ -50,7 +50,7 @@ public class Config extends javax.swing.JFrame {
         jLabel1.setText("Configuracion");
 
         BRegUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegUsuarios.setText("Usuarios registrados");
+        BRegUsuarios.setText("Registrar Usuario");
 
         BReturn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BReturn.setText("Volver");

@@ -48,7 +48,7 @@ public class ClienteDAO {
             pstm = con.getConnection().prepareStatement(SQL_INSERT);
             pstm.setString(1, cli.getDni_cli());
             pstm.setString(2, cli.getNom_cli());
-            pstm.setInt(3, cli.getId_cli());
+            pstm.setString(3, cli.getTelf_cli());
             if(pstm.executeUpdate()>0){
                 result = true;
             }

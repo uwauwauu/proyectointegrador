@@ -4,17 +4,20 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.HistReservaController;
+
 /**
  *
  * @author User
  */
 public class HistReserva extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Reportes
-     */
+    private HistReservaController controlador;
+    
     public HistReserva() {
         initComponents();
+        this.setLocationRelativeTo(null); 
+        this.controlador = new HistReservaController(this);
     }
 
     /**
@@ -50,13 +53,13 @@ public class HistReserva extends javax.swing.JFrame {
 
         jTableReservas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Fecha", "Hora", "Tiempo", "Telefono", "Personas", "Entrada", "Plato", "Postre", "Bebida", "Costo", "Estado"
+                "ID", "Fecha", "Hora de Inicio", "Hora de Final", "Num personas", "DNI", "Num mesa"
             }
         ));
         jTableReservas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -69,7 +72,7 @@ public class HistReserva extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1070, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel3.setText("Registro de Reservas");
+        jLabel3.setText("Historial de Reservas");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
         BEliminar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

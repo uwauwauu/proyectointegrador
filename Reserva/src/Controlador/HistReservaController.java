@@ -24,13 +24,13 @@ public class HistReservaController implements ActionListener{
         this.vista.BEliminar.addActionListener(this);
         this.vista.BActualizar.addActionListener(this);
         this.vista.BRefresh.addActionListener(this);
-        this.vista.BVolver.addActionListener(this);
         this.vista.jTableReservas.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableReservasMouseClicked(evt);
             }
         });
+        listarReserva(vista.jTableReservas);
     }
     
     
@@ -49,9 +49,6 @@ public class HistReservaController implements ActionListener{
         }
         if(e.getSource()== vista.BRefresh){
             listarReserva(vista.jTableReservas);
-        }
-        if(e.getSource()== vista.BVolver){
-            
         }
     }
     

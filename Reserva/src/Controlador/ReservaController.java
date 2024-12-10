@@ -5,6 +5,8 @@
 package Controlador;
 
 import com.reservarp.dao.ReservaDAO;
+import com.reservasrp.vistas.InicioEmpleado;
+import com.reservasrp.vistas.RegCliente;
 import com.reservasrp.vistas.RegReserva;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,8 +35,36 @@ public class ReservaController implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.BRegCliente) {
+            new RegCliente().setVisible(true);
+        }
+        if (e.getSource() == vista.BAgrBebida) {
+           
+        }
+        if (e.getSource() == vista.BAgrPlatillo) {
+            
+        }
+        if (e.getSource() == vista.BAgrPostre) {
+            
+        }
+        if (e.getSource() == vista.BLimpiar) {
+            reset();
+        }
+        if (e.getSource() == vista.BReservar) {
+            
+        }
+        if (e.getSource() == vista.BVolver) {
+            new InicioEmpleado().setVisible(true);
+            vista.dispose();
+        }
+        
         
     }
     
+    public void reset() {
+        vista.DNIText.setText("");
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) vista.jTableReserva.getModel();
+        model.setRowCount(0); //resetear
+    }
     
 }

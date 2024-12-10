@@ -13,18 +13,21 @@ public class Platillo {
     private String nom_pl;
     private Double puni_pl;
     private String tipo_pl;
+    private String abrv_pl;
 
-    public Platillo(int id_pl, String nom_pl, Double puni_pl, String tipo_pl) {
+    public Platillo(int id_pl, String nom_pl, Double puni_pl, String tipo_pl, String abrv_pl) {
         this.id_pl = id_pl;
         this.nom_pl = nom_pl;
         this.puni_pl = puni_pl;
         this.tipo_pl = tipo_pl;
+        this.abrv_pl = abrv_pl;
     }
 
-    public Platillo(String nom_pl, Double puni_pl, String tipo_pl) {
+    public Platillo(String nom_pl, Double puni_pl, String tipo_pl, String abrv_pl) {
         this.nom_pl = nom_pl;
         this.puni_pl = puni_pl;
         this.tipo_pl = tipo_pl;
+        this.abrv_pl = abrv_pl;
     }
 
     public int getId_pl() {
@@ -58,4 +61,12 @@ public class Platillo {
     public void setTipo_pl(String tipo_pl) {
         this.tipo_pl = tipo_pl;
     }
+
+    public String getAbrv_pl() {
+        return abrv_pl;
+    }
+
+    public void setAbrv_pl(String abrv_pl) {
+        this.abrv_pl = abrv_pl;
+    } 
 }

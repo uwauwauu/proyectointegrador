@@ -38,8 +38,9 @@ public class InicioAdmin extends javax.swing.JFrame {
         fechas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BConfig = new javax.swing.JButton();
-        BReportes = new javax.swing.JButton();
+        BRegUsr = new javax.swing.JButton();
         BHistReserva1 = new javax.swing.JButton();
+        BReportes1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,15 +79,19 @@ public class InicioAdmin extends javax.swing.JFrame {
                 BConfigActionPerformed(evt);
             }
         });
-        jPanel1.add(BConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 641, 90, 80));
+        jPanel1.add(BConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, 90, 80));
 
-        BReportes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BReportes.setText("Reportes de consumo");
-        jPanel1.add(BReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
+        BRegUsr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BRegUsr.setText("Registrar Usuario");
+        jPanel1.add(BRegUsr, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 600, 230, 60));
 
         BHistReserva1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BHistReserva1.setText("Historial de Reservas");
         jPanel1.add(BHistReserva1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 230, 60));
+
+        BReportes1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BReportes1.setText("Reportes de consumo");
+        jPanel1.add(BReportes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,7 +161,8 @@ public class InicioAdmin extends javax.swing.JFrame {
     public javax.swing.JButton BConfig;
     public javax.swing.JButton BHistReserva1;
     public javax.swing.JButton BLogout;
-    public javax.swing.JButton BReportes;
+    public javax.swing.JButton BRegUsr;
+    public javax.swing.JButton BReportes1;
     private javax.swing.JLabel fechas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

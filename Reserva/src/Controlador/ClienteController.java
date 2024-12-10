@@ -6,7 +6,7 @@ package Controlador;
 
 import com.reserva.entity.Cliente;
 import com.reservarp.dao.ClienteDAO;
-import com.reservasrp.vistas.ResCliente;
+import com.reservasrp.vistas.RegCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -16,10 +16,10 @@ import javax.swing.JOptionPane;
  * @author Natalia
  */
 public class ClienteController implements ActionListener{
-    private ResCliente vista;
+    private RegCliente vista;
     private ClienteDAO model;
 
-    public ClienteController(ResCliente vista) {
+    public ClienteController(RegCliente vista) {
         this.vista = vista;
         this.model = new ClienteDAO();
         this.vista.BRegCli.addActionListener(this);
