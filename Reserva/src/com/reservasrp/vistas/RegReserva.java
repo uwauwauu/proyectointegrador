@@ -120,7 +120,7 @@ public class RegReserva extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel15.setText("S/.100.00.000");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 710, 160, 40));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 710, 160, 40));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setText("Postres:");
@@ -275,8 +275,8 @@ public class RegReserva extends javax.swing.JFrame {
         jPanel1.add(BAgrPlatillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 180, 30));
 
         BLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BLimpiar.setText("Limpiar");
-        jPanel1.add(BLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 710, -1, -1));
+        BLimpiar.setText("Eliminar");
+        jPanel1.add(BLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 710, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

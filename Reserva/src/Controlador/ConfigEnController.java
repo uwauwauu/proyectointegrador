@@ -25,6 +25,12 @@ public class ConfigEnController implements ActionListener {
         this.vista.BActualizar.addActionListener(this);
         this.vista.BAgregar.addActionListener(this);
         this.vista.BEliminar.addActionListener(this);
+        this.vista.jTableEntrada.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+               jTableEntradaMouseClicked(evt);
+            }
+        });
     }
 
     @Override
@@ -43,7 +49,7 @@ public class ConfigEnController implements ActionListener {
         }
     }
     
-    private void jTableBebMouseClicked(java.awt.event.MouseEvent evt) {
+    private void jTableEntradaMouseClicked(java.awt.event.MouseEvent evt) {
         int selectedRow = vista.jTableEntrada.getSelectedRow();
         if (selectedRow != -1) {
             String id_pl = vista.jTableEntrada.getValueAt(selectedRow, 0).toString();

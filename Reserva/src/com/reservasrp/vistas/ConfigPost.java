@@ -4,14 +4,19 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.ConfigPostController;
+
 /**
  *
  * @author User
  */
 public class ConfigPost extends javax.swing.JFrame {
     
+    private ConfigPostController controlador;
+    
     public ConfigPost() {
         initComponents();
+        this.controlador = new ConfigPostController(this);
     }
 
     /**

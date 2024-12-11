@@ -70,7 +70,7 @@ public class PlatilloDAO {
             pstm = con.getConnection().prepareStatement(SQL_INSERT);
             pstm.setString(1, platillo.getNom_pl());
             pstm.setDouble(2, platillo.getPuni_pl());
-            pstm.setString(3, "Plato de fondo"); // Establecemos siempre 'Bebida'
+            pstm.setString(3, "Plato de fondo"); // Establecemos siempre 'Plato de fondo'
             pstm.setString(4, platillo.getAbrv_pl());
             if (pstm.executeUpdate() > 0) {
                 result = true;
@@ -88,7 +88,7 @@ public class PlatilloDAO {
             pstm = con.getConnection().prepareStatement(SQL_INSERT);
             pstm.setString(1, platillo.getNom_pl());
             pstm.setDouble(2, platillo.getPuni_pl());
-            pstm.setString(3, "Postre"); // Establecemos siempre 'Bebida'
+            pstm.setString(3, "Postre"); // Establecemos siempre 'Postre'
             pstm.setString(4, platillo.getAbrv_pl());
             if (pstm.executeUpdate() > 0) {
                 result = true;

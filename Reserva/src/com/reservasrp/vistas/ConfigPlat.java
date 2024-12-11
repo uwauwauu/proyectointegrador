@@ -4,17 +4,19 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.ConfigPlatController;
+
 /**
  *
  * @author User
  */
 public class ConfigPlat extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Reportes
-     */
+    private ConfigPlatController controlador;
+    
     public ConfigPlat() {
         initComponents();
+        this.controlador = new ConfigPlatController(this);
     }
 
     /**
@@ -29,13 +31,12 @@ public class ConfigPlat extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTablePlatoFondo = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        BEliminar = new javax.swing.JButton();
         IDtxt = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        BActualizar = new javax.swing.JButton();
+        BAgregar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Nomtxt = new javax.swing.JTextField();
@@ -51,20 +52,25 @@ public class ConfigPlat extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("ID");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 40));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTablePlatoFondo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Platillo", "Categoria"
+                "ID", "Nombre", "P. Unitario", "Categoria", "Abreviatura"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jTablePlatoFondo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTablePlatoFondoMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTablePlatoFondo);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 1070, -1));
 
@@ -72,62 +78,62 @@ public class ConfigPlat extends javax.swing.JFrame {
         jLabel3.setText("Editar Plato de fondo");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setText("Eliminar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
+        BEliminar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BEliminar.setText("Eliminar");
+        jPanel1.add(BEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, -1));
 
         IDtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(IDtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 60, 40));
+        jPanel1.add(IDtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 60, 40));
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton5.setText("Limpiar");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        BActualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BActualizar.setText("Actualizar");
+        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton6.setText("Actualizar");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
-
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton7.setText("Agregar");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, -1, -1));
+        BAgregar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BAgregar.setText("Agregar");
+        jPanel1.add(BAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/list.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 50, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Nombre");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 100, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 100, 40));
 
         Nomtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(Nomtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 160, 40));
+        jPanel1.add(Nomtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 160, 40));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("Abreviatura");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, 130, 40));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, 130, 40));
 
         Abrvtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(Abrvtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 100, 120, 40));
+        jPanel1.add(Abrvtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 90, 120, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setText("P. Unidad");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 110, 40));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 110, 40));
 
         Punitxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(Punitxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 120, 40));
+        jPanel1.add(Punitxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1136, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTablePlatoFondoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePlatoFondoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTablePlatoFondoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -172,14 +178,13 @@ public class ConfigPlat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Abrvtxt;
-    private javax.swing.JTextField IDtxt;
-    private javax.swing.JTextField Nomtxt;
-    private javax.swing.JTextField Punitxt;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    public javax.swing.JTextField Abrvtxt;
+    public javax.swing.JButton BActualizar;
+    public javax.swing.JButton BAgregar;
+    public javax.swing.JButton BEliminar;
+    public javax.swing.JTextField IDtxt;
+    public javax.swing.JTextField Nomtxt;
+    public javax.swing.JTextField Punitxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -188,6 +193,6 @@ public class ConfigPlat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jTablePlatoFondo;
     // End of variables declaration//GEN-END:variables
 }
