@@ -5,6 +5,7 @@
 package com.reservasrp.vistas;
 
 import Controlador.LoginController;
+import Controlador.RegUserController;
 
 /**
  *
@@ -12,9 +13,12 @@ import Controlador.LoginController;
  */
 public class RegUsr extends javax.swing.JFrame {
     
+    private RegUserController controlador;
+    
     public RegUsr() {
         initComponents();
         this.setLocationRelativeTo(null); 
+        this.controlador = new RegUserController(this);
     }
 
     /**
@@ -244,19 +248,27 @@ public class RegUsr extends javax.swing.JFrame {
     }//GEN-LAST:event_DNItxtFocusGained
 
     private void jUsuariotxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jUsuariotxtFocusLost
-        jUsuariotxt.setText("Usuario");
+        if(jUsuariotxt.getText().equals("")){
+            jUsuariotxt.setText("Usuario");
+        }
     }//GEN-LAST:event_jUsuariotxtFocusLost
 
     private void DNItxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DNItxtFocusLost
-        DNItxt.setText("DNI");
+        if(DNItxt.getText().equals("")){
+            DNItxt.setText("DNI");
+        } 
     }//GEN-LAST:event_DNItxtFocusLost
 
     private void NombretxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NombretxtFocusLost
-        Nombretxt.setText("Nombre");
+        if(Nombretxt.getText().equals("")){
+            Nombretxt.setText("Nombre");
+        }  
     }//GEN-LAST:event_NombretxtFocusLost
 
     private void jContraseñatxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jContraseñatxtFocusLost
-        jContraseñatxt.setText("Contraseña");
+        if(jContraseñatxt.getText().equals("")){
+            jContraseñatxt.setText("Contraseña");
+        } 
     }//GEN-LAST:event_jContraseñatxtFocusLost
 
     /**
