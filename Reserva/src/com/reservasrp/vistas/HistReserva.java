@@ -36,9 +36,6 @@ public class HistReserva extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         BEliminar = new javax.swing.JButton();
         IDtxt = new javax.swing.JTextField();
-        BVolver = new javax.swing.JButton();
-        BEditar = new javax.swing.JButton();
-        BActualizar = new javax.swing.JButton();
         BRefresh = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
@@ -81,18 +78,6 @@ public class HistReserva extends javax.swing.JFrame {
 
         IDtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(IDtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, 30));
-
-        BVolver.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BVolver.setText("Volver");
-        jPanel1.add(BVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        BEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BEditar.setText("Editar");
-        jPanel1.add(BEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
-
-        BActualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BActualizar.setText("Actualizar");
-        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
 
         BRefresh.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BRefresh.setText("Refrescar");
@@ -158,11 +143,8 @@ public class HistReserva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BActualizar;
-    public javax.swing.JButton BEditar;
     public javax.swing.JButton BEliminar;
     public javax.swing.JButton BRefresh;
-    public javax.swing.JButton BVolver;
     public javax.swing.JTextField IDtxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

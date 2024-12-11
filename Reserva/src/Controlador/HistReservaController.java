@@ -20,9 +20,7 @@ public class HistReservaController implements ActionListener{
     public HistReservaController(HistReserva vista) {
         this.vista = vista;
         this.model = new ReservaDAO();
-        this.vista.BEditar.addActionListener(this);
         this.vista.BEliminar.addActionListener(this);
-        this.vista.BActualizar.addActionListener(this);
         this.vista.BRefresh.addActionListener(this);
         this.vista.jTableReservas.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -37,15 +35,10 @@ public class HistReservaController implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== vista.BEditar){
-            
-        }
         if(e.getSource()== vista.BEliminar){
             Integer ID_res = Integer.valueOf(vista.IDtxt.getText());
             model.eliminar(ID_res);
-        }
-        if(e.getSource()== vista.BActualizar){
-            
+            listarReserva(vista.jTableReservas);
         }
         if(e.getSource()== vista.BRefresh){
             listarReserva(vista.jTableReservas);

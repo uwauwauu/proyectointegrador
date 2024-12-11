@@ -6,7 +6,7 @@ package Controlador;
 
 import com.reservasrp.vistas.Config;
 import com.reservasrp.vistas.ConfigBeb;
-import com.reservasrp.vistas.ConfigCate;
+import com.reservasrp.vistas.ConfigPost;
 import com.reservasrp.vistas.ConfigPlat;
 import com.reservasrp.vistas.ConfigUsr;
 import com.reservasrp.vistas.InicioAdmin;
@@ -32,7 +32,7 @@ public class ConfigController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.BConfCat) {
-            new ConfigCate().setVisible(true);
+            new ConfigPost().setVisible(true);
         }
         if (e.getSource() == vista.BVisPlatillos) {
             new ConfigPlat().setVisible(true);

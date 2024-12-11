@@ -38,7 +38,6 @@ public class Usuario {
         this.con_us = con_us;
     }
     
-
     public int getId_us() {
         return id_us;
     }

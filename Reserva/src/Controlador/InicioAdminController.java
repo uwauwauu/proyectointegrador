@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -9,6 +9,7 @@ import com.reservasrp.vistas.HistReserva;
 import com.reservasrp.vistas.Reportes;
 import com.reservasrp.vistas.InicioAdmin;
 import com.reservasrp.vistas.Login;
+import com.reservasrp.vistas.RegUsr;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -62,11 +63,14 @@ public class InicioAdminController implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== vista.BRegUser){
+        if(e.getSource()== vista.BHistReserva){
             new HistReserva().setVisible(true);
         }
-        if(e.getSource()== vista.BRegUser){
+        if(e.getSource()== vista.BRepCon){
             new Reportes().setVisible(true);
+        }
+        if(e.getSource()== vista.BRegUser){
+            new RegUsr().setVisible(true);
         }
         if(e.getSource()== vista.BLogout){
             logout();

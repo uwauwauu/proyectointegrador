@@ -61,7 +61,7 @@ public class Config extends javax.swing.JFrame {
         });
 
         BVisPlatillos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BVisPlatillos.setText("Platillos");
+        BVisPlatillos.setText("Platos de fondo");
 
         BBebidas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BBebidas.setText("Bebidas");
@@ -70,7 +70,7 @@ public class Config extends javax.swing.JFrame {
         fechas.setText("DD/MM/YYYY");
 
         BConfCat.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BConfCat.setText("Categorias");
+        BConfCat.setText("Postres");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/configu.png"))); // NOI18N
 
@@ -105,15 +105,15 @@ public class Config extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(fechas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BConfCat, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BVisPlatillos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(18, 18, 18)
+                .addComponent(BConfCat, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(BBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(18, 18, 18)
                 .addComponent(BRegUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,7 +124,7 @@ public class Config extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

@@ -29,10 +29,12 @@ public class RegUsr extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        BLogin = new javax.swing.JButton();
+        BRegister = new javax.swing.JButton();
         jContraseñatxt = new javax.swing.JPasswordField();
         jUsuariotxt = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        BRadioPrivilegios = new javax.swing.JRadioButton();
+        Nombretxt = new javax.swing.JTextField();
+        DNItxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -41,19 +43,19 @@ public class RegUsr extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setText("Registro");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, 61));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, 61));
 
         jPanel2.setBackground(new java.awt.Color(255, 153, 102));
 
-        BLogin.setBackground(new java.awt.Color(255, 83, 0));
-        BLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BLogin.setText("Registrar");
-        BLogin.setBorderPainted(false);
-        BLogin.addActionListener(new java.awt.event.ActionListener() {
+        BRegister.setBackground(new java.awt.Color(255, 83, 0));
+        BRegister.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BRegister.setText("Registrar");
+        BRegister.setBorderPainted(false);
+        BRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BLoginActionPerformed(evt);
+                BRegisterActionPerformed(evt);
             }
         });
 
@@ -62,20 +64,81 @@ public class RegUsr extends javax.swing.JFrame {
         jContraseñatxt.setText("Contraseña");
         jContraseñatxt.setToolTipText("");
         jContraseñatxt.setBorder(new javax.swing.border.MatteBorder(null));
+        jContraseñatxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jContraseñatxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jContraseñatxtFocusLost(evt);
+            }
+        });
 
         jUsuariotxt.setBackground(new java.awt.Color(255, 83, 0));
         jUsuariotxt.setForeground(new java.awt.Color(255, 255, 255));
         jUsuariotxt.setText("Usuario");
         jUsuariotxt.setBorder(new javax.swing.border.MatteBorder(null));
         jUsuariotxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jUsuariotxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jUsuariotxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jUsuariotxtFocusLost(evt);
+            }
+        });
         jUsuariotxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jUsuariotxtActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jRadioButton1.setText("Administrador");
+        BRadioPrivilegios.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BRadioPrivilegios.setText("Administrador");
+        BRadioPrivilegios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRadioPrivilegiosActionPerformed(evt);
+            }
+        });
+
+        Nombretxt.setBackground(new java.awt.Color(255, 83, 0));
+        Nombretxt.setForeground(new java.awt.Color(255, 255, 255));
+        Nombretxt.setText("Nombre");
+        Nombretxt.setToolTipText("");
+        Nombretxt.setBorder(new javax.swing.border.MatteBorder(null));
+        Nombretxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Nombretxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                NombretxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                NombretxtFocusLost(evt);
+            }
+        });
+        Nombretxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombretxtActionPerformed(evt);
+            }
+        });
+
+        DNItxt.setBackground(new java.awt.Color(255, 83, 0));
+        DNItxt.setForeground(new java.awt.Color(255, 255, 255));
+        DNItxt.setText("DNI");
+        DNItxt.setToolTipText("");
+        DNItxt.setBorder(new javax.swing.border.MatteBorder(null));
+        DNItxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        DNItxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DNItxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DNItxtFocusLost(evt);
+            }
+        });
+        DNItxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DNItxtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -85,13 +148,15 @@ public class RegUsr extends javax.swing.JFrame {
                 .addContainerGap(83, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jContraseñatxt)
-                    .addComponent(jUsuariotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jUsuariotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DNItxt, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(77, 77, 77))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRadioButton1)
-                    .addComponent(BLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(117, 117, 117)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BRadioPrivilegios))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -99,20 +164,24 @@ public class RegUsr extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jUsuariotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(DNItxt, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(Nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jContraseñatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jRadioButton1)
                 .addGap(18, 18, 18)
-                .addComponent(BLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addComponent(BRadioPrivilegios)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 410, 330));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 410, 360));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/6326055.png"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 330, 300));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 330, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,19 +191,73 @@ public class RegUsr extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BLoginActionPerformed
+    private void BRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegisterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BLoginActionPerformed
+    }//GEN-LAST:event_BRegisterActionPerformed
 
     private void jUsuariotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsuariotxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jUsuariotxtActionPerformed
+
+    private void BRadioPrivilegiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRadioPrivilegiosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BRadioPrivilegiosActionPerformed
+
+    private void NombretxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombretxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombretxtActionPerformed
+
+    private void DNItxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DNItxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DNItxtActionPerformed
+
+    private void jUsuariotxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jUsuariotxtFocusGained
+        if(jUsuariotxt.getText().equals("Usuario")){
+            jUsuariotxt.setText("");
+        }
+    }//GEN-LAST:event_jUsuariotxtFocusGained
+
+    private void jContraseñatxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jContraseñatxtFocusGained
+        if(jContraseñatxt.getText().equals("Contraseña")){
+            jContraseñatxt.setText("");
+        }
+    }//GEN-LAST:event_jContraseñatxtFocusGained
+
+    private void NombretxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NombretxtFocusGained
+        if(Nombretxt.getText().equals("Nombre")){
+            Nombretxt.setText("");
+        }
+    }//GEN-LAST:event_NombretxtFocusGained
+
+    private void DNItxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DNItxtFocusGained
+        if(DNItxt.getText().equals("DNI")){
+            DNItxt.setText("");
+        }
+    }//GEN-LAST:event_DNItxtFocusGained
+
+    private void jUsuariotxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jUsuariotxtFocusLost
+        jUsuariotxt.setText("Usuario");
+    }//GEN-LAST:event_jUsuariotxtFocusLost
+
+    private void DNItxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DNItxtFocusLost
+        DNItxt.setText("DNI");
+    }//GEN-LAST:event_DNItxtFocusLost
+
+    private void NombretxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NombretxtFocusLost
+        Nombretxt.setText("Nombre");
+    }//GEN-LAST:event_NombretxtFocusLost
+
+    private void jContraseñatxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jContraseñatxtFocusLost
+        jContraseñatxt.setText("Contraseña");
+    }//GEN-LAST:event_jContraseñatxtFocusLost
 
     /**
      * @param args the command line arguments
@@ -170,13 +293,15 @@ public class RegUsr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BLogin;
+    public javax.swing.JRadioButton BRadioPrivilegios;
+    public javax.swing.JButton BRegister;
+    public javax.swing.JTextField DNItxt;
+    public javax.swing.JTextField Nombretxt;
     public javax.swing.JPasswordField jContraseñatxt;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
     public javax.swing.JTextField jUsuariotxt;
     // End of variables declaration//GEN-END:variables
 }
