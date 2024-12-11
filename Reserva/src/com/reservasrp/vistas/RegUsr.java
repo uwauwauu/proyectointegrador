@@ -4,7 +4,6 @@
  */
 package com.reservasrp.vistas;
 
-import Controlador.LoginController;
 import Controlador.RegUserController;
 
 /**

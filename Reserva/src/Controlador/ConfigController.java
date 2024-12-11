@@ -6,9 +6,9 @@ package Controlador;
 
 import com.reservasrp.vistas.Config;
 import com.reservasrp.vistas.ConfigBeb;
+import com.reservasrp.vistas.ConfigEn;
 import com.reservasrp.vistas.ConfigPost;
 import com.reservasrp.vistas.ConfigPlat;
-import com.reservasrp.vistas.ConfigUsr;
 import com.reservasrp.vistas.InicioAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +25,7 @@ public class ConfigController implements ActionListener{
         this.vista.BConfCat.addActionListener(this);
         this.vista.BVisPlatillos.addActionListener(this);
         this.vista.BBebidas.addActionListener(this);
-        this.vista.BRegUsuarios.addActionListener(this);
+        this.vista.BEntradas.addActionListener(this);
         this.vista.BReturn.addActionListener(this);
     }
     
@@ -40,8 +40,8 @@ public class ConfigController implements ActionListener{
         if (e.getSource() == vista.BBebidas) {
             new ConfigBeb().setVisible(true);
         }
-        if (e.getSource() == vista.BRegUsuarios) {
-            new ConfigUsr().setVisible(true);
+        if (e.getSource() == vista.BReturn) {
+            new ConfigEn().setVisible(true);
         }
         if (e.getSource() == vista.BReturn) {
             new InicioAdmin().setVisible(true);

@@ -34,13 +34,13 @@ public class Config extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BRegUsuarios = new javax.swing.JButton();
         BReturn = new javax.swing.JButton();
         BVisPlatillos = new javax.swing.JButton();
         BBebidas = new javax.swing.JButton();
         fechas = new javax.swing.JLabel();
         BConfCat = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        BEntradas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -48,9 +48,6 @@ public class Config extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Configuracion");
-
-        BRegUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BRegUsuarios.setText("Registrar Usuario");
 
         BReturn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BReturn.setText("Volver");
@@ -74,6 +71,9 @@ public class Config extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/configu.png"))); // NOI18N
 
+        BEntradas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BEntradas.setText("Entradas");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -88,10 +88,10 @@ public class Config extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(230, 230, 230)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BEntradas, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BConfCat, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BVisPlatillos, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BRegUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -112,7 +112,7 @@ public class Config extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(BBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BRegUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BEntradas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -148,7 +148,7 @@ public class Config extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BBebidas;
     public javax.swing.JButton BConfCat;
-    public javax.swing.JButton BRegUsuarios;
+    public javax.swing.JButton BEntradas;
     public javax.swing.JButton BReturn;
     public javax.swing.JButton BVisPlatillos;
     private javax.swing.JLabel fechas;

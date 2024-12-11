@@ -42,7 +42,7 @@ public class ConfigPost extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         nomtxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        punitxt1 = new javax.swing.JTextField();
+        punitxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -112,8 +112,8 @@ public class ConfigPost extends javax.swing.JFrame {
         jLabel6.setText("P. Unidad");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, 40));
 
-        punitxt1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(punitxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 80, 40));
+        punitxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(punitxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,6 +190,6 @@ public class ConfigPost extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTablePostres;
     private javax.swing.JTextField nomtxt;
-    private javax.swing.JTextField punitxt1;
+    private javax.swing.JTextField punitxt;
     // End of variables declaration//GEN-END:variables
 }
