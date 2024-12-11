@@ -4,17 +4,19 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.ConfigEnController;
+
 /**
  *
  * @author User
  */
 public class ConfigEn extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Reportes
-     */
+    private ConfigEnController controlador;
+    
     public ConfigEn() {
         initComponents();
+        this.controlador = new ConfigEnController(this);
     }
 
     /**
@@ -204,7 +206,7 @@ public class ConfigEn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTableEntrada;
+    public javax.swing.JTable jTableEntrada;
     public javax.swing.JTextField nomtxt;
     public javax.swing.JTextField punitxt;
     // End of variables declaration//GEN-END:variables

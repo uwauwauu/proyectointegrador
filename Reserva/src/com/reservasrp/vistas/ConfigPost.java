@@ -9,10 +9,7 @@ package com.reservasrp.vistas;
  * @author User
  */
 public class ConfigPost extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Reportes
-     */
+    
     public ConfigPost() {
         initComponents();
     }
@@ -30,17 +27,16 @@ public class ConfigPost extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablePostres = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        BEliminar = new javax.swing.JButton();
+        BActualizar = new javax.swing.JButton();
+        BAgregar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        id_pltxt = new javax.swing.JTextField();
+        id_pstxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         abrvtxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        nomtxt = new javax.swing.JTextField();
+        nompostxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         punitxt = new javax.swing.JTextField();
 
@@ -68,21 +64,17 @@ public class ConfigPost extends javax.swing.JFrame {
         jLabel3.setText("Editar Postres");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setText("Eliminar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
+        BEliminar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BEliminar.setText("Eliminar");
+        jPanel1.add(BEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton5.setText("Limpiar");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        BActualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BActualizar.setText("Actualizar");
+        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton6.setText("Actualizar");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
-
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton7.setText("Agregar");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
+        BAgregar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BAgregar.setText("Agregar");
+        jPanel1.add(BAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/list.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, -1, -1));
@@ -91,8 +83,8 @@ public class ConfigPost extends javax.swing.JFrame {
         jLabel1.setText("ID");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 40));
 
-        id_pltxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(id_pltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 70, 40));
+        id_pstxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(id_pstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 70, 40));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Abreviado");
@@ -105,8 +97,8 @@ public class ConfigPost extends javax.swing.JFrame {
         jLabel5.setText("Nombre");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 40));
 
-        nomtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(nomtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 180, 40));
+        nompostxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(nompostxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 180, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setText("P. Unidad");
@@ -174,12 +166,11 @@ public class ConfigPost extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField abrvtxt;
-    private javax.swing.JTextField id_pltxt;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    public javax.swing.JButton BActualizar;
+    public javax.swing.JButton BAgregar;
+    public javax.swing.JButton BEliminar;
+    public javax.swing.JTextField abrvtxt;
+    public javax.swing.JTextField id_pstxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -188,8 +179,8 @@ public class ConfigPost extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTablePostres;
-    private javax.swing.JTextField nomtxt;
-    private javax.swing.JTextField punitxt;
+    public javax.swing.JTable jTablePostres;
+    public javax.swing.JTextField nompostxt;
+    public javax.swing.JTextField punitxt;
     // End of variables declaration//GEN-END:variables
 }
