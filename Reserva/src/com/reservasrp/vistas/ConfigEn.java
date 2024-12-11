@@ -33,7 +33,6 @@ public class ConfigEn extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         BEliminar = new javax.swing.JButton();
         idtxt = new javax.swing.JTextField();
-        BLimpiar = new javax.swing.JButton();
         BActualizar = new javax.swing.JButton();
         BAgregar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -55,13 +54,13 @@ public class ConfigEn extends javax.swing.JFrame {
 
         jTableEntrada.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre"
+                "ID", "Nombre", "P. Unitario", "Categoria", "Abreviatura"
             }
         ));
         jScrollPane1.setViewportView(jTableEntrada);
@@ -74,22 +73,18 @@ public class ConfigEn extends javax.swing.JFrame {
 
         BEliminar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BEliminar.setText("Eliminar");
-        jPanel1.add(BEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, -1, -1));
+        jPanel1.add(BEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
 
         idtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(idtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 90, 40));
 
-        BLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BLimpiar.setText("Limpiar");
-        jPanel1.add(BLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
         BActualizar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BActualizar.setText("Actualizar");
-        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        jPanel1.add(BActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         BAgregar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BAgregar.setText("Agregar");
-        jPanel1.add(BAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
+        jPanel1.add(BAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/reservasrp/vistas/images/list.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 50, -1, -1));
@@ -106,7 +101,7 @@ public class ConfigEn extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 90, 40));
 
         nomtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(nomtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 150, 40));
+        jPanel1.add(nomtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 150, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setText("P.Unidad");
@@ -196,12 +191,11 @@ public class ConfigEn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BActualizar;
-    private javax.swing.JButton BAgregar;
-    private javax.swing.JButton BEliminar;
-    private javax.swing.JButton BLimpiar;
-    private javax.swing.JTextField abrvtxt;
-    private javax.swing.JTextField idtxt;
+    public javax.swing.JButton BActualizar;
+    public javax.swing.JButton BAgregar;
+    public javax.swing.JButton BEliminar;
+    public javax.swing.JTextField abrvtxt;
+    public javax.swing.JTextField idtxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -211,7 +205,7 @@ public class ConfigEn extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableEntrada;
-    private javax.swing.JTextField nomtxt;
-    private javax.swing.JTextField punitxt;
+    public javax.swing.JTextField nomtxt;
+    public javax.swing.JTextField punitxt;
     // End of variables declaration//GEN-END:variables
 }
