@@ -46,16 +46,16 @@ public class RegReserva extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         BVolver = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox8 = new javax.swing.JComboBox<>();
+        CBPlatoFondo = new javax.swing.JComboBox<>();
         numpersonas = new javax.swing.JSpinner();
         jSpinner5 = new javax.swing.JSpinner();
         SEntradas = new javax.swing.JSpinner();
         CBEntrada = new javax.swing.JComboBox<>();
         jSpinner10 = new javax.swing.JSpinner();
-        jComboBox22 = new javax.swing.JComboBox<>();
+        CBBebidas = new javax.swing.JComboBox<>();
         jSpinner16 = new javax.swing.JSpinner();
         jLabel19 = new javax.swing.JLabel();
-        jComboBox30 = new javax.swing.JComboBox<>();
+        CBPostre = new javax.swing.JComboBox<>();
         jSpinner24 = new javax.swing.JSpinner();
         calendarfec = new com.jcalendar.pane.calendar.CalendarPane();
         CBHoraInicio = new javax.swing.JComboBox<>();
@@ -136,13 +136,13 @@ public class RegReserva extends javax.swing.JFrame {
         jLabel18.setText("Plato de fondo:");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 250, 40));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Pollo a la brasa", "Pollo a la plancha", "Pollo a la bbq" }));
-        jComboBox8.addActionListener(new java.awt.event.ActionListener() {
+        CBPlatoFondo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Pollo a la brasa", "Pollo a la plancha", "Pollo a la bbq" }));
+        CBPlatoFondo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox8ActionPerformed(evt);
+                CBPlatoFondoActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 230, 30));
+        jPanel1.add(CBPlatoFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 230, 30));
 
         numpersonas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(numpersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 60, 40));
@@ -164,13 +164,13 @@ public class RegReserva extends javax.swing.JFrame {
         jSpinner10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(jSpinner10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 330, 60, 30));
 
-        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Inka Cola", "Coca Cola", "Chicha", "Limonada", "Maracuyá" }));
-        jComboBox22.addActionListener(new java.awt.event.ActionListener() {
+        CBBebidas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Inka Cola", "Coca Cola", "Chicha", "Limonada", "Maracuyá" }));
+        CBBebidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox22ActionPerformed(evt);
+                CBBebidasActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox22, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 190, 30));
+        jPanel1.add(CBBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 190, 30));
 
         jSpinner16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(jSpinner16, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 60, 30));
@@ -179,13 +179,13 @@ public class RegReserva extends javax.swing.JFrame {
         jLabel19.setText("Total en soles:");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 710, 160, 40));
 
-        jComboBox30.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Tartaleta de fresa", "Tiramisú", "Brownie", "Porción red velvet", "Porción cheesecake" }));
-        jComboBox30.addActionListener(new java.awt.event.ActionListener() {
+        CBPostre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----", "Tartaleta de fresa", "Tiramisú", "Brownie", "Porción red velvet", "Porción cheesecake" }));
+        CBPostre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox30ActionPerformed(evt);
+                CBPostreActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox30, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 230, 30));
+        jPanel1.add(CBPostre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 230, 30));
 
         jSpinner24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(jSpinner24, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, 60, 30));
@@ -299,9 +299,9 @@ public class RegReserva extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox8ActionPerformed
+    private void CBPlatoFondoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPlatoFondoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox8ActionPerformed
+    }//GEN-LAST:event_CBPlatoFondoActionPerformed
 
     private void CBMesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBMesaActionPerformed
         // TODO add your handling code here:
@@ -311,13 +311,13 @@ public class RegReserva extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CBEntradaActionPerformed
 
-    private void jComboBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox22ActionPerformed
+    private void CBBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBBebidasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox22ActionPerformed
+    }//GEN-LAST:event_CBBebidasActionPerformed
 
-    private void jComboBox30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox30ActionPerformed
+    private void CBPostreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPostreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox30ActionPerformed
+    }//GEN-LAST:event_CBPostreActionPerformed
 
     private void CBHoraInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBHoraInicioActionPerformed
         // TODO add your handling code here:
@@ -388,18 +388,18 @@ public class RegReserva extends javax.swing.JFrame {
     public javax.swing.JButton BRegCliente;
     public javax.swing.JButton BReservar;
     public javax.swing.JButton BVolver;
+    public javax.swing.JComboBox<String> CBBebidas;
     public javax.swing.JComboBox<String> CBEntrada;
     public javax.swing.JComboBox<String> CBHoraFinal;
     public javax.swing.JComboBox<String> CBHoraInicio;
     public javax.swing.JComboBox<String> CBMesa;
+    public javax.swing.JComboBox<String> CBPlatoFondo;
+    public javax.swing.JComboBox<String> CBPostre;
     public javax.swing.JTextField DNIText;
     public javax.swing.JSpinner SEntradas;
     public com.jcalendar.pane.calendar.CalendarPane calendarfec;
     private com.jcalendar.model.JCalModel jCalModel1;
     private com.jcalendar.model.JCalModel jCalModel2;
-    public javax.swing.JComboBox<String> jComboBox22;
-    public javax.swing.JComboBox<String> jComboBox30;
-    public javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;

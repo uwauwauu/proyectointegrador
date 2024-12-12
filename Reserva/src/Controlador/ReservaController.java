@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import com.reserva.entity.Platillo;
 import com.reservarp.dao.PedidoDAO;
 import com.reservarp.dao.ReservaDAO;
 import com.reservasrp.vistas.InicioEmpleado;
@@ -11,6 +12,7 @@ import com.reservasrp.vistas.RegCliente;
 import com.reservasrp.vistas.RegReserva;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 /**
  *
@@ -32,6 +34,10 @@ public class ReservaController implements ActionListener{
         this.vista.BLimpiar.addActionListener(this);
         this.vista.BReservar.addActionListener(this);
         this.vista.BVolver.addActionListener(this);
+        this.vista.CBEntrada.addActionListener(this);
+        this.vista.CBBebidas.addActionListener(this);
+        this.vista.CBPostre.addActionListener(this);
+        this.vista.CBPlatoFondo.addActionListener(this);
     }
 
     @Override
@@ -40,6 +46,18 @@ public class ReservaController implements ActionListener{
             new RegCliente().setVisible(true);
         }
         if (e.getSource() == vista.BAgrBebida) {
+           
+        }
+        if (e.getSource() == vista.CBEntrada) {
+           
+        }
+        if (e.getSource() == vista.CBBebidas) {
+           
+        }
+        if (e.getSource() == vista.CBPostre) {
+           
+        }        
+        if (e.getSource() == vista.CBPlatoFondo) {
            
         }
         if (e.getSource() == vista.BAgrPlatillo) {
@@ -60,10 +78,19 @@ public class ReservaController implements ActionListener{
         }   
     }
     
+    public void conseguirTexto(){
+        for(int i=0; i<model.list().size()-1; i++){
+            
+        }
+    }
+    
     public void reset() {
         vista.DNIText.setText("");
         javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) vista.jTableReserva.getModel();
         model.setRowCount(0); //resetear
     }
     
+    private void agregarReserva() {
+        String dni = vista.DNIText.getText();
+    }
 }
