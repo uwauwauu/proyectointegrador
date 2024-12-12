@@ -40,7 +40,7 @@ public class ConfigController implements ActionListener{
         if (e.getSource() == vista.BBebidas) {
             new ConfigBeb().setVisible(true);
         }
-        if (e.getSource() == vista.BReturn) {
+        if (e.getSource() == vista.BEntradas) {
             new ConfigEn().setVisible(true);
         }
         if (e.getSource() == vista.BReturn) {

@@ -4,17 +4,19 @@
  */
 package com.reservasrp.vistas;
 
+import Controlador.ReservaController;
+
 /**
  *
  * @author User
  */
 public class RegReserva extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Reserva
-     */
+    private ReservaController controlador;
+    
     public RegReserva() {
         initComponents();
+        this.controlador = new ReservaController(this);
     }
 
     /**
