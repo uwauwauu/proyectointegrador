@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import com.reservarp.dao.PedidoDAO;
 import com.reservarp.dao.ReservaDAO;
 import com.reservasrp.vistas.InicioEmpleado;
 import com.reservasrp.vistas.RegCliente;
@@ -18,6 +19,7 @@ import java.awt.event.ActionListener;
 public class ReservaController implements ActionListener{
     private RegReserva vista;
     private ReservaDAO model;
+    private PedidoDAO pedido;
 
     public ReservaController(RegReserva vista) {
         this.vista = vista;
@@ -30,7 +32,6 @@ public class ReservaController implements ActionListener{
         this.vista.BLimpiar.addActionListener(this);
         this.vista.BReservar.addActionListener(this);
         this.vista.BVolver.addActionListener(this);
-        
     }
 
     @Override
@@ -56,9 +57,7 @@ public class ReservaController implements ActionListener{
         if (e.getSource() == vista.BVolver) {
             new InicioEmpleado().setVisible(true);
             vista.dispose();
-        }
-        
-        
+        }   
     }
     
     public void reset() {
